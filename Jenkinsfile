@@ -12,7 +12,7 @@ pipeline {
                 parallel(install: {
                     sh "mvn -U clean test cobertura:cobertura -Dcobertura.report.format=xml"
                 }, sonar: {
-                    sh "mvn sonar:sonar -Dsonar.host.url=http://192.168.1.16:39000"
+                    sh "mvn sonar:sonar -Dsonar.host.url= http://192.168.1.16:39000"
                 })
             }
             post {
